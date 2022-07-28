@@ -13,8 +13,8 @@ const ClienteDrawer = () => {
     const Stack = createNativeStackNavigator()
     return ( 
         <Drawer.Navigator useLegacyImplementation={true}  drawerContent={(props) => <CustomMainDrawer {...props}/>} >
-            <Drawer.Screen name='Produtos' component={ProdutosStack}/>
-            <Drawer.Screen name='Perfil' component={PerfilCliente} />
+            <Drawer.Screen name='Produtos' component={ProdutosStack} options={{headerTitle: "" ,headerStyle:{backgroundColor:"#212121"}, headerTintColor: "#7a7a7a", headerShadowVisible: false}}/>
+            <Drawer.Screen name='Perfil' component={PerfilCliente} options={{headerTitle: "" ,headerStyle:{backgroundColor:"#212121"}, headerTintColor: "#7a7a7a", headerShadowVisible: false}}/>
         </Drawer.Navigator>
      );
 }

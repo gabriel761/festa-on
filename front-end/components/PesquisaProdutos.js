@@ -1,4 +1,4 @@
-import { StyleSheet, View, TextInput, TouchableOpacity, Text } from "react-native";
+import { StyleSheet, View, TextInput, TouchableOpacity, Image } from "react-native";
 import globalStyles from "../global_styles/globalStyles";
 import api from "../api/api"
 import { useState } from "react";
@@ -22,11 +22,10 @@ const PesquisaProdutos = ({setProdutos}) => {
     }
     return ( 
         <View style={styles.wrap}>
-            <TextInput style={[globalStyles.input, styles.input]} onChangeText={(value)=>setBarraPesq(value)}/>
+            <TextInput style={[ styles.input]} onChangeText={(value)=>setBarraPesq(value)}/>
             <TouchableOpacity style={styles.button} onPress={()=>pressHandle(barraPesq)}>
-                <Text style={styles.buttonText}>Pesquisar</Text>
+                <Image style={styles.lupa} source={require("../assets/images/lupa_icon.png")}/>
             </TouchableOpacity>
-           
         </View>
      );
 }
@@ -35,24 +34,34 @@ const PesquisaProdutos = ({setProdutos}) => {
 const styles = StyleSheet.create({
     wrap:{
         flexDirection:"row",
-        margin: 20
+        height: 40,
+        marginVertical: 30,
+        alignSelf:"center",
+        width:'82%',
+        borderWidth: 1,
+        backgroundColor: "#fff"
     },
     input:{
-        flex:3,
-        marginRight:10,
-        backgroundColor:"white"
+        flex:1,
+        backgroundColor:"white",
+        borderWidth: 0,
+        margin: 0,
+        fontSize: 18,
+        color: "#212121",
+        paddingVertical: 0,
+        paddingHorizontal: 10
     },
     button:{
-        flex:1,
-        backgroundColor: 'blue',
-        borderRadius: 10,
-        justifyContent:"center",
-        alignItems:"center",
-        marginTop:10,
-        marginBottom:10,
+        width:40,
+       justifyContent: "center",
+       alignItems: "flex-end",
+       borderWidth:0
     },
-    buttonText:{
-        color:"white"
+    lupa:{
+        height: 20,
+        width: 20,
+        marginRight: 10,
+        borderWidth:0
     }
 })
 

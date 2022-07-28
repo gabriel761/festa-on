@@ -6,7 +6,7 @@ import api from "../api/api";
 const Produto = ({route}) => {
     const {id} = route.params
     const [produto, setProduto] = useState({})
-    console.log(id)
+    
     useEffect(() => {
         api.request({
             url:'/produtos/'+id,

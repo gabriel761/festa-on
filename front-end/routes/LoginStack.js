@@ -14,10 +14,10 @@ const LoginStack = () => {
     return ( 
         <Stack.Navigator>
           <Stack.Screen name="Login" component={Login} options={{headerShown: false}}/>
-          <Stack.Screen name="Cadastro Cliente" component={CadastroCliente} options={{title: '', headerStyle:{backgroundColor:"#212121"}, headerTintColor: "#7a7a7a"}} />
+          <Stack.Screen name="Cadastro Cliente" component={CadastroCliente} options={{title: '' ,headerStyle:{backgroundColor:"#212121"}, headerTintColor: "#7a7a7a",headerShadowVisible: false}} />
           <Stack.Screen name="Cadastro Produto" component={CadastroProduto}/>
-          <Stack.Screen name="Cadastro Fornecedor" component={CadastroFornecedor}/>
-          <Stack.Screen name="Cliente Drawer" component={ClienteDrawer} options={{headerShown: false}}/>
+          <Stack.Screen name="Cadastro Fornecedor" component={CadastroFornecedor} options={{title: '', headerStyle:{backgroundColor:"#212121"}, headerTintColor: "#7a7a7a",headerShadowVisible: false}}/>
+          <Stack.Screen name="Cliente Drawer" component={ClienteDrawer} options={{headerShown: false}} />
           <Stack.Screen name="Fornecedores Drawer" component={FornecedorDrawer} options={{headerShown: false}}/>
         </Stack.Navigator>
      );

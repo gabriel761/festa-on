@@ -4,6 +4,7 @@ create table pessoa (
 	nome varchar (50) not null,
 	email varchar (50) not null,
 	senha varchar (50) not null
+	tipo_pessoa varchar (20)
 );
 create table cliente (
 	pk_id serial primary key,
